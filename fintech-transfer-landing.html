@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mova — современный сервис международных переводов." />
+    <title>Mova — международные переводы без скрытых комиссий</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: '#11211e',
+              moss: '#0e6d5b',
+              mint: '#b4f7d2',
+              paper: '#f8faf7',
+              cloud: '#eef4f1',
+              coral: '#ff6955'
+            },
+            fontFamily: {
+              sans: ['Manrope', 'ui-sans-serif', 'system-ui'],
+              mono: ['DM Mono', 'ui-monospace', 'monospace']
+            },
+            boxShadow: {
+              soft: '0 22px 70px rgba(12, 48, 40, 0.11)',
+              float: '0 28px 80px rgba(12, 48, 40, 0.17)',
+              card: '0 10px 28px rgba(12, 48, 40, 0.08)'
+            },
+            backgroundImage: {
+              grid: "linear-gradient(to right, rgba(17,33,30,.055) 1px, transparent 1px), linear-gradient(to bottom, rgba(17,33,30,.055) 1px, transparent 1px)"
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      body { -webkit-font-smoothing: antialiased; }
+      .hero-orb { filter: blur(1px); }
+      .phone-reflection { background: linear-gradient(113deg, transparent 12%, rgba(255,255,255,.5) 28%, transparent 45%); }
+      .currency-select { appearance: none; background-image: none; }
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+      input[type=number] { -moz-appearance: textfield; }
+    </style>
+  </head>
+  <body class="bg-paper font-sans text-ink selection:bg-mint selection:text-ink">
+    <div class="relative overflow-hidden">
+      <div class="hero-orb absolute -top-44 left-[18%] h-[29rem] w-[29rem] rounded-full bg-mint/70 opacity-70"></div>
+      <div class="hero-orb absolute right-[-11rem] top-20 h-[27rem] w-[27rem] rounded-full bg-[#d3e6ff] opacity-70"></div>
+
+      <header class="relative z-20 mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-10">
+        <a href="#" class="inline-flex items-center gap-2.5" aria-label="Mova, на главную">
+          <span class="grid h-9 w-9 place-items-center rounded-xl bg-ink text-mint shadow-card">
+            <svg viewBox="0 0 32 32" class="h-5 w-5 fill-none" aria-hidden="true"><path d="M6 22.5 12.5 9l3.2 7 3.4-7 6.6 13.5" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="text-xl font-extrabold tracking-[-0.06em]">mova</span>
+        </a>
+        <nav class="hidden items-center gap-7 text-sm font-semibold text-ink/70 lg:flex" aria-label="Основная навигация">
+          <a href="#how" class="transition hover:text-moss">Как это работает</a>
+          <a href="#benefits" class="transition hover:text-moss">Возможности</a>
+          <a href="#pricing" class="transition hover:text-moss">Тарифы</a>
+          <a href="#security" class="transition hover:text-moss">Безопасность</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="#login" class="hidden px-3 py-2 text-sm font-bold text-ink transition hover:text-moss sm:block">Войти</a>
+          <a href="#start" class="rounded-full bg-ink px-5 py-3 text-sm font-bold text-white shadow-card transition hover:-translate-y-0.5 hover:bg-moss">Открыть счёт</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="relative z-10 mx-auto grid max-w-7xl gap-14 px-5 pb-20 pt-12 sm:px-8 md:pb-28 md:pt-20 lg:grid-cols-[1.02fr_.98fr] lg:items-center lg:gap-10 lg:px-10 lg:pt-24">
+          <div class="max-w-2xl">
+            <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-moss/10 bg-white/70 px-3.5 py-2 text-xs font-bold text-moss backdrop-blur">
+              <span class="h-2 w-2 rounded-full bg-[#35c485]"></span>
+              Переводы в 70+ стран
+            </div>
+            <h1 class="max-w-xl text-4xl font-extrabold leading-[1.04] tracking-[-0.065em] text-ink sm:text-5xl lg:text-6xl">
+              Деньги движутся <span class="relative whitespace-nowrap text-moss">так же быстро<span class="absolute -bottom-1 left-0 h-2 w-full -rotate-1 rounded-full bg-mint/80"></span></span>, как вы.
+            </h1>
+            <p class="mt-7 max-w-lg text-base leading-7 text-ink/65 sm:text-lg">
+              Один мультивалютный счёт для международных переводов, оплаты и управления деньгами без неприятных сюрпризов в курсе.
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="#start" class="inline-flex items-center justify-center gap-2 rounded-full bg-coral px-6 py-4 text-sm font-extrabold text-white shadow-[0_12px_24px_rgba(255,105,85,.24)] transition hover:-translate-y-0.5 hover:brightness-95">
+                Начать бесплатно
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a href="#how" class="inline-flex items-center justify-center gap-2 rounded-full border border-ink/15 bg-white/65 px-6 py-4 text-sm font-bold transition hover:border-moss/35 hover:bg-white">
+                <span class="grid h-5 w-5 place-items-center rounded-full bg-mint text-[10px] text-ink">▶</span>
+                Посмотреть, как работает
+              </a>
+            </div>
+            <div class="mt-10 flex flex-wrap items-center gap-x-5 gap-y-3 text-xs font-semibold text-ink/55">
+              <span class="inline-flex items-center gap-1.5"><svg class="h-4 w-4 text-moss" viewBox="0 0 24 24" fill="none"><path d="m5 12 4.2 4L19 6.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Без абонентской платы</span>
+              <span class="inline-flex items-center gap-1.5"><svg class="h-4 w-4 text-moss" viewBox="0 0 24 24" fill="none"><path d="m5 12 4.2 4L19 6.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Реальный обменный курс</span>
+              <span class="inline-flex items-center gap-1.5"><svg class="h-4 w-4 text-moss" viewBox="0 0 24 24" fill="none"><path d="m5 12 4.2 4L19 6.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Регистрация за 3 минуты</span>
+            </div>
+          </div>
+
+          <div class="relative mx-auto w-full max-w-[35rem] lg:mr-0">
+            <div class="absolute -left-10 top-20 hidden h-36 w-36 rounded-full bg-mint/80 blur-[1px] sm:block"></div>
+            <div class="absolute -right-3 -top-8 h-24 w-24 rounded-full border-[15px] border-coral/15"></div>
+            <div class="relative rounded-[2rem] border border-white/90 bg-white/85 p-4 shadow-float backdrop-blur-md sm:p-6">
+              <div class="mb-5 flex items-center justify-between">
+                <div>
+                  <p class="text-[11px] font-extrabold uppercase tracking-[.16em] text-moss">Калькулятор перевода</p>
+                  <p class="mt-1 text-sm font-bold">Вы всегда знаете итоговую сумму</p>
+                </div>
+                <span class="grid h-10 w-10 place-items-center rounded-xl bg-mint text-moss">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 7h10M7 17h10M15 3l4 4-4 4M9 13l-4 4 4 4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+
+              <div class="space-y-3">
+                <label class="block rounded-2xl border border-ink/10 bg-cloud/70 p-4 transition focus-within:border-moss/45 focus-within:bg-white">
+                  <span class="mb-2 block text-[11px] font-bold uppercase tracking-[.12em] text-ink/45">Вы отправляете</span>
+                  <span class="flex items-center gap-3">
+                    <input id="sendAmount" type="number" inputmode="decimal" min="1" value="1000" class="min-w-0 flex-1 bg-transparent text-2xl font-extrabold tracking-[-.04em] outline-none" aria-label="Сумма отправки" />
+                    <span class="relative shrink-0">
+                      <select id="fromCurrency" class="currency-select rounded-xl bg-white py-2 pl-3 pr-8 text-sm font-extrabold outline-none ring-1 ring-ink/10" aria-label="Валюта отправки">
+                        <option value="EUR">🇪🇺 EUR</option>
+                        <option value="USD">🇺🇸 USD</option>
+                        <option value="GBP">🇬🇧 GBP</option>
+                      </select>
+                      <svg class="pointer-events-none absolute right-2.5 top-1/2 h-3 w-3 -translate-y-1/2 text-ink/55" viewBox="0 0 24 24" fill="none"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                  </span>
+                </label>
+
+                <div class="relative h-3">
+                  <button id="swapCurrencies" class="absolute left-1/2 top-1/2 grid h-9 w-9 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-4 border-white bg-ink text-white shadow-card transition hover:rotate-180 hover:bg-moss" aria-label="Поменять валюты местами">
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none"><path d="M7 7h10M7 7l3-3M7 7l3 3M17 17H7m10 0-3-3m3 3-3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </button>
+                </div>
+
+                <label class="block rounded-2xl border border-moss/20 bg-[#effbf4] p-4 transition focus-within:border-moss/50">
+                  <span class="mb-2 block text-[11px] font-bold uppercase tracking-[.12em] text-ink/45">Получатель получит</span>
+                  <span class="flex items-center gap-3">
+                    <output id="receiveAmount" class="min-w-0 flex-1 overflow-hidden text-2xl font-extrabold tracking-[-.04em]">917.74</output>
+                    <span class="relative shrink-0">
+                      <select id="toCurrency" class="currency-select rounded-xl bg-white py-2 pl-3 pr-8 text-sm font-extrabold outline-none ring-1 ring-moss/15" aria-label="Валюта получения">
+                        <option value="USD">🇺🇸 USD</option>
+                        <option value="EUR">🇪🇺 EUR</option>
+                        <option value="GBP">🇬🇧 GBP</option>
+                      </select>
+                      <svg class="pointer-events-none absolute right-2.5 top-1/2 h-3 w-3 -translate-y-1/2 text-ink/55" viewBox="0 0 24 24" fill="none"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                  </span>
+                </label>
+              </div>
+
+              <div class="mt-5 rounded-2xl bg-ink px-4 py-3.5 text-white">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="text-white/60">Курс Mova</span>
+                  <span id="rate" class="font-mono font-medium">1 EUR = 0.9200 USD</span>
+                </div>
+                <div class="mt-2 flex items-center justify-between text-xs">
+                  <span class="text-white/60">Комиссия сервиса</span>
+                  <span id="fee" class="font-mono font-medium">9.00 EUR</span>
+                </div>
+              </div>
+              <button class="mt-4 w-full rounded-xl bg-coral py-4 text-sm font-extrabold text-white transition hover:brightness-95">Продолжить перевод</button>
+              <p class="mt-3 text-center text-[11px] font-medium text-ink/45">Курс обновлён только что · Без скрытой наценки</p>
+            </div>
+            <div class="absolute -bottom-7 -left-6 hidden items-center gap-3 rounded-2xl border border-white bg-white/95 px-4 py-3 shadow-card sm:flex">
+              <span class="grid h-9 w-9 place-items-center rounded-full bg-[#fff1ed] text-coral">✦</span>
+              <span class="text-xs font-bold leading-5">€2,560 отправлено<br><span class="font-medium text-ink/45">за последние 60 секунд</span></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="relative border-y border-ink/5 bg-white/55 py-7 backdrop-blur-sm">
+          <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 px-5 sm:px-8 md:flex-row lg:px-10">
+            <p class="text-center text-xs font-bold uppercase tracking-[.13em] text-ink/40 md:text-left">Выбирают люди и команды по всему миру</p>
+            <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-base font-extrabold tracking-[-.04em] text-ink/35 sm:gap-x-12">
+              <span>nomad<span class="text-moss">wise</span></span><span>intercom<span class="text-coral">.</span></span><span>Northstar</span><span>lightly</span><span>kanso<span class="text-moss">+</span></span>
+            </div>
+          </div>
+        </section>
+
+        <section id="how" class="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
+          <div class="grid gap-12 lg:grid-cols-[.85fr_1.15fr] lg:items-end">
+            <div>
+              <p class="text-xs font-extrabold uppercase tracking-[.16em] text-moss">Создано для движения</p>
+              <h2 class="mt-4 max-w-md text-3xl font-extrabold leading-tight tracking-[-.055em] sm:text-4xl">Всё, что нужно для денег без границ.</h2>
+            </div>
+            <p class="max-w-xl text-base leading-7 text-ink/60">Открывайте балансы в разных валютах, получайте оплату от клиентов и тратьте средства там, где находитесь. Без банковской бюрократии и сложных тарифов.</p>
+          </div>
+          <div class="mt-12 grid gap-4 md:grid-cols-3">
+            <article class="group rounded-3xl border border-ink/7 bg-white p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-soft">
+              <span class="grid h-11 w-11 place-items-center rounded-2xl bg-mint text-moss"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M7 12h3m-3 4h5M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <h3 class="mt-6 text-lg font-extrabold tracking-[-.035em]">Счета без границ</h3>
+              <p class="mt-3 text-sm leading-6 text-ink/58">Храните и получайте деньги в 20+ валютах с локальными реквизитами.</p>
+              <a href="#start" class="mt-6 inline-flex items-center gap-1.5 text-sm font-bold text-moss">Узнать больше <span>→</span></a>
+            </article>
+            <article class="group rounded-3xl border border-ink/7 bg-[#f1f9f6] p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-soft">
+              <span class="grid h-11 w-11 place-items-center rounded-2xl bg-[#d9eaff] text-[#3976c6]"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M4 12h16M12 4v16" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></span>
+              <h3 class="mt-6 text-lg font-extrabold tracking-[-.035em]">Оплата в один тап</h3>
+              <p class="mt-3 text-sm leading-6 text-ink/58">Виртуальная карта и мгновенные уведомления о каждой покупке.</p>
+              <a href="#start" class="mt-6 inline-flex items-center gap-1.5 text-sm font-bold text-moss">Узнать больше <span>→</span></a>
+            </article>
+            <article class="group rounded-3xl border border-ink/7 bg-[#fff9ed] p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-soft">
+              <span class="grid h-11 w-11 place-items-center rounded-2xl bg-[#ffe4a9] text-[#b06c0d]"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M5 19V5m0 14h14M8 15l3-4 3 2 5-7" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <h3 class="mt-6 text-lg font-extrabold tracking-[-.035em]">Расходы под контролем</h3>
+              <p class="mt-3 text-sm leading-6 text-ink/58">Автоматическая категоризация, бюджеты и понятная аналитика месяца.</p>
+              <a href="#start" class="mt-6 inline-flex items-center gap-1.5 text-sm font-bold text-moss">Узнать больше <span>→</span></a>
+            </article>
+          </div>
+        </section>
+
+        <section id="benefits" class="overflow-hidden bg-ink py-20 text-white sm:py-28">
+          <div class="mx-auto grid max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:items-center lg:px-10">
+            <div class="relative mx-auto h-[31rem] w-full max-w-md sm:h-[34rem]">
+              <div class="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-moss/60 blur-3xl"></div>
+              <div class="phone-reflection absolute left-1/2 top-1/2 z-10 h-[29rem] w-[14.5rem] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[2.7rem] border-[7px] border-[#d4e5df] bg-[#f7fffb] shadow-[0_28px_70px_rgba(0,0,0,.42)] sm:h-[32rem] sm:w-[16rem]">
+                <div class="absolute left-1/2 top-2 h-5 w-20 -translate-x-1/2 rounded-full bg-[#243c36]"></div>
+                <div class="px-5 pb-5 pt-10 text-ink">
+                  <div class="flex items-center justify-between text-[10px] font-extrabold"><span>9:41</span><span>◒ ▰ ◔</span></div>
+                  <div class="mt-6 flex items-center justify-between"><span class="text-sm font-extrabold">Добрый день, Mia</span><span class="grid h-7 w-7 place-items-center rounded-full bg-mint text-xs">M</span></div>
+                  <div class="mt-5 rounded-2xl bg-ink p-4 text-white shadow-card">
+                    <p class="text-[9px] font-bold uppercase tracking-[.13em] text-white/55">Всего средств</p>
+                    <p class="mt-2 text-2xl font-extrabold tracking-[-.06em]">€ 12,480.50</p>
+                    <div class="mt-5 flex items-center justify-between text-[10px] text-white/60"><span>EUR balance</span><span class="font-mono text-mint">+4.8%</span></div>
+                  </div>
+                  <div class="mt-5 grid grid-cols-4 gap-2 text-center text-[9px] font-bold">
+                    <span><span class="mx-auto mb-1.5 grid h-9 w-9 place-items-center rounded-xl bg-mint text-base text-moss">↑</span>Отправить</span>
+                    <span><span class="mx-auto mb-1.5 grid h-9 w-9 place-items-center rounded-xl bg-cloud text-base">↓</span>Получить</span>
+                    <span><span class="mx-auto mb-1.5 grid h-9 w-9 place-items-center rounded-xl bg-cloud text-base">▣</span>Карта</span>
+                    <span><span class="mx-auto mb-1.5 grid h-9 w-9 place-items-center rounded-xl bg-cloud text-base">···</span>Ещё</span>
+                  </div>
+                  <div class="mt-6"><p class="text-xs font-extrabold">Последние операции</p><div class="mt-3 space-y-3 text-[10px]"><div class="flex items-center justify-between"><span class="flex items-center gap-2"><b class="grid h-7 w-7 place-items-center rounded-full bg-[#fce7dd] text-coral">⇢</b><span><strong class="block">Перевод в USD</strong><small class="text-ink/45">Сегодня, 14:24</small></span></span><strong>-€ 980.00</strong></div><div class="flex items-center justify-between"><span class="flex items-center gap-2"><b class="grid h-7 w-7 place-items-center rounded-full bg-mint text-moss">↓</b><span><strong class="block">Оплата от April</strong><small class="text-ink/45">Вчера, 11:08</small></span></span><strong class="text-moss">+€ 1,250</strong></div></div></div>
+                </div>
+              </div>
+              <div class="absolute bottom-5 left-0 z-20 rounded-2xl border border-white/15 bg-white/10 p-3.5 backdrop-blur"><p class="text-[10px] font-bold text-white/55">Расходы в этом месяце</p><p class="mt-1 text-lg font-extrabold">на 18% ниже</p><div class="mt-2 h-1.5 w-28 overflow-hidden rounded-full bg-white/20"><div class="h-full w-[42%] rounded-full bg-mint"></div></div></div>
+            </div>
+            <div>
+              <p class="text-xs font-extrabold uppercase tracking-[.16em] text-mint">Ваши деньги — ваш ритм</p>
+              <h2 class="mt-4 max-w-lg text-3xl font-extrabold leading-tight tracking-[-.055em] sm:text-4xl">Видеть все деньги. Управлять каждым шагом.</h2>
+              <p class="mt-6 max-w-xl text-base leading-7 text-white/63">Mova собирает переводы, карты и валютные балансы в одном спокойном интерфейсе. Так у вас остаётся больше времени на саму жизнь.</p>
+              <ul class="mt-8 space-y-4">
+                <li class="flex items-start gap-3"><span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-mint text-moss"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none"><path d="m5 12 4.2 4L19 6.5" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b class="text-sm">Прозрачный курс</b><small class="mt-1 block text-sm text-white/55">Рыночный курс и комиссия видны до подтверждения перевода.</small></span></li>
+                <li class="flex items-start gap-3"><span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-mint text-moss"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none"><path d="m5 12 4.2 4L19 6.5" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b class="text-sm">Уведомления в реальном времени</b><small class="mt-1 block text-sm text-white/55">Знайте о каждом поступлении и списании сразу.</small></span></li>
+                <li class="flex items-start gap-3"><span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-mint text-moss"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none"><path d="m5 12 4.2 4L19 6.5" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b class="text-sm">Контроль в один тап</b><small class="mt-1 block text-sm text-white/55">Заморозьте карту или установите лимит, где бы вы ни были.</small></span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="pricing" class="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
+          <div class="text-center"><p class="text-xs font-extrabold uppercase tracking-[.16em] text-moss">Простая цена</p><h2 class="mt-4 text-3xl font-extrabold tracking-[-.055em] sm:text-4xl">Платите только за движение денег.</h2><p class="mx-auto mt-4 max-w-xl text-base leading-7 text-ink/60">Счёт и карта бесплатны. Комиссия зависит только от направления и суммы перевода.</p></div>
+          <div class="mx-auto mt-12 grid max-w-4xl gap-4 md:grid-cols-2">
+            <div class="rounded-3xl border border-ink/10 bg-white p-7 shadow-card"><p class="text-sm font-extrabold">Personal</p><p class="mt-3 text-4xl font-extrabold tracking-[-.06em]">€0 <span class="text-sm font-bold text-ink/45">/ месяц</span></p><p class="mt-4 text-sm leading-6 text-ink/58">Для повседневных переводов, путешествий и личных расходов.</p><ul class="mt-7 space-y-3 text-sm font-semibold"><li>✓ Мультивалютный счёт</li><li>✓ Виртуальная карта</li><li>✓ Переводы от 0.45%</li></ul><a href="#start" class="mt-8 block rounded-xl border border-ink/15 py-3.5 text-center text-sm font-extrabold transition hover:border-moss hover:text-moss">Открыть личный счёт</a></div>
+            <div class="relative overflow-hidden rounded-3xl bg-moss p-7 text-white shadow-soft"><div class="absolute right-0 top-0 h-36 w-36 translate-x-10 -translate-y-10 rounded-full bg-mint/20"></div><p class="relative text-sm font-extrabold text-mint">Business</p><p class="relative mt-3 text-4xl font-extrabold tracking-[-.06em]">€12 <span class="text-sm font-bold text-white/60">/ месяц</span></p><p class="relative mt-4 text-sm leading-6 text-white/65">Для международных команд, подрядчиков и растущего бизнеса.</p><ul class="relative mt-7 space-y-3 text-sm font-semibold"><li>✓ Всё из Personal</li><li>✓ Выплаты команде</li><li>✓ Роли и лимиты</li></ul><a href="#start" class="relative mt-8 block rounded-xl bg-mint py-3.5 text-center text-sm font-extrabold text-ink transition hover:bg-white">Открыть бизнес-счёт</a></div>
+          </div>
+        </section>
+
+        <section id="security" class="mx-auto max-w-7xl px-5 pb-20 sm:px-8 sm:pb-28 lg:px-10">
+          <div class="grid overflow-hidden rounded-[2rem] bg-cloud md:grid-cols-[1.2fr_.8fr]">
+            <div class="p-8 sm:p-12"><span class="grid h-12 w-12 place-items-center rounded-2xl bg-white text-moss shadow-card"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-3.6 8-10V5l-8-3-8 3v7c0 6.4 8 10 8 10Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.5 12 2.2 2.2 4.8-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h2 class="mt-6 max-w-md text-3xl font-extrabold tracking-[-.055em]">Безопасность — не дополнительная функция.</h2><p class="mt-4 max-w-lg text-sm leading-6 text-ink/60">Мы используем многоуровневую защиту данных, уведомления об операциях и биометрическую авторизацию, чтобы контроль оставался у вас.</p><a href="#" class="mt-6 inline-flex items-center gap-2 text-sm font-extrabold text-moss">Узнать о защите средств <span>→</span></a></div>
+            <div class="flex items-center justify-center bg-moss p-8"><div class="w-full max-w-[16rem] rounded-3xl border border-white/15 bg-white/10 p-5 text-white backdrop-blur"><div class="flex items-center justify-between"><span class="grid h-10 w-10 place-items-center rounded-xl bg-mint text-moss"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM5 10V7a7 7 0 1 1 14 0v3M5 10h14v10H5V10Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span class="text-xs font-bold text-mint">Защищено</span></div><p class="mt-6 text-lg font-extrabold">Ваши данные зашифрованы</p><div class="mt-5 flex gap-1.5"> <i class="h-1.5 flex-1 rounded-full bg-mint"></i><i class="h-1.5 flex-1 rounded-full bg-mint"></i><i class="h-1.5 flex-1 rounded-full bg-mint"></i><i class="h-1.5 flex-1 rounded-full bg-white/20"></i></div><p class="mt-3 text-[11px] font-medium text-white/55">Многофакторная авторизация активна</p></div></div>
+          </div>
+        </section>
+
+        <section id="start" class="bg-mint px-5 py-16 sm:px-8 sm:py-20">
+          <div class="mx-auto flex max-w-5xl flex-col items-center justify-between gap-8 text-center md:flex-row md:text-left"><div><p class="text-xs font-extrabold uppercase tracking-[.16em] text-moss">Ваш следующий перевод</p><h2 class="mt-3 max-w-xl text-3xl font-extrabold tracking-[-.055em] sm:text-4xl">Откройте счёт, который движется вместе с вами.</h2></div><a href="#" class="shrink-0 rounded-full bg-ink px-7 py-4 text-sm font-extrabold text-white shadow-card transition hover:-translate-y-0.5 hover:bg-moss">Начать бесплатно</a></div>
+        </section>
+      </main>
+
+      <footer class="bg-ink px-5 py-10 text-white/60 sm:px-8 lg:px-10"><div class="mx-auto flex max-w-7xl flex-col justify-between gap-6 sm:flex-row sm:items-center"><a href="#" class="inline-flex items-center gap-2 text-white"><span class="grid h-8 w-8 place-items-center rounded-lg bg-mint text-moss"><svg viewBox="0 0 32 32" class="h-4 w-4 fill-none" aria-hidden="true"><path d="M6 22.5 12.5 9l3.2 7 3.4-7 6.6 13.5" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="text-lg font-extrabold tracking-[-.06em]">mova</span></a><p class="text-xs">© 2026 Mova Financial. Демонстрационный макет.</p><div class="flex gap-5 text-xs font-bold"><a href="#" class="hover:text-mint">Условия</a><a href="#" class="hover:text-mint">Конфиденциальность</a><a href="#" class="hover:text-mint">Контакты</a></div></div></footer>
+    </div>
+
+    <script>
+      const rates = { EUR: { EUR: 1, USD: 0.92, GBP: 0.78 }, USD: { EUR: 1.087, USD: 1, GBP: 0.848 }, GBP: { EUR: 1.282, USD: 1.179, GBP: 1 } };
+      const symbols = { EUR: '€', USD: '$', GBP: '£' };
+      const sendAmount = document.getElementById('sendAmount');
+      const fromCurrency = document.getElementById('fromCurrency');
+      const toCurrency = document.getElementById('toCurrency');
+      const receiveAmount = document.getElementById('receiveAmount');
+      const rate = document.getElementById('rate');
+      const fee = document.getElementById('fee');
+
+      function updateCalculator() {
+        const amount = Math.max(0, Number(sendAmount.value) || 0);
+        const from = fromCurrency.value;
+        const to = toCurrency.value;
+        const transferFee = amount * 0.009;
+        const conversionRate = rates[from][to];
+        const received = Math.max(0, (amount - transferFee) * conversionRate);
+        receiveAmount.textContent = new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(received);
+        rate.textContent = `1 ${from} = ${conversionRate.toFixed(4)} ${to}`;
+        fee.textContent = `${symbols[from]}${transferFee.toFixed(2)} ${from}`;
+      }
+
+      [sendAmount, fromCurrency, toCurrency].forEach((element) => element.addEventListener('input', updateCalculator));
+      document.getElementById('swapCurrencies').addEventListener('click', () => {
+        const previous = fromCurrency.value;
+        fromCurrency.value = toCurrency.value;
+        toCurrency.value = previous;
+        updateCalculator();
+      });
+      updateCalculator();
+    </script>
+  </body>
+</html>
